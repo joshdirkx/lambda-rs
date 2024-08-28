@@ -1,3 +1,4 @@
-# Deploying a Rust Lambda Function
+# Rust Lambda Function Example
 
-This repository contains an AWS Lambda function written in Rust, designed to be deployed as a Docker image. The function processes incoming events and returns a simple response.
+This repository provides an example on how to create an AWS Lambda Function 
+using Rust and Docker.
