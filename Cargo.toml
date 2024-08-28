@@ -1,0 +1,13 @@
+[package]
+name = "lambda-rs"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "bootstrap"
+path = "src/main.rs"
+
+[dependencies]
+lambda_runtime = "0.13.0"
+serde = { version = "1.0.209", features = ["derive"] }
+tokio = "1.39.3"
