@@ -6,24 +6,24 @@ on:
       - main
 
 jobs:
-  build:
+  verify-build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
+    - name: checkout
       uses: actions/checkout@v4
 
-    - name: Set up Rust
+    - name: install
       uses: actions-rs/toolchain@v1
       with:
         toolchain: stable
         target: x86_64-unknown-linux-musl
         override: true
 
-    - name: Build project
+    - name: build
       run: cargo build --release --target x86_64-unknown-linux-musl
 
-    - name: Check for `main.rs` build success
+    - name: verify
       run: |
         if [ ! -f ./target/x86_64-unknown-linux-musl/release/function ]; then
           echo "Build failed, exiting"
