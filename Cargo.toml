@@ -1,10 +1,10 @@
 [package]
-name = "lambda-rs"
+name = "function"
 version = "0.1.0"
 edition = "2021"
 
 [[bin]]
-name = "bootstrap"
+name = "function"
 path = "src/main.rs"
 
 [dependencies]
